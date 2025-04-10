@@ -30,25 +30,6 @@
 } */
 
 
-/* ---------------versai font-family-------------- */
-@font-face {
-  font-family: Myroboto;
-  font-style: normal;
-  src: url('s/roboto/Roboto-Regular.ttf') format('truetype');
-}
-
-
-@font-face {
-  font-family: Mypopp;
-  font-style: normal;
-  src: url('s/poppins/Poppins-SemiBold.ttf');
-}
-
-@font-face {
-  font-family: Mylato;
-  font-style: normal;
-  src: url('s/lato/Lato-Regular.ttf') format('truetype');
-}
 
 
 

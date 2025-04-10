@@ -38,7 +38,26 @@
 /*----------------------------------------*/
 /*  1.1 Theme Default
 /*----------------------------------------*/
-@import url('../../../../css2');
+
+/* ---------------versai font-family-------------- */
+@font-face {
+  font-family: Myroboto;
+  font-style: normal;
+  src: url('../../../../s/roboto/Roboto-Medium.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: Mypopp;
+  font-style: normal;
+  src: url('../../../../s/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: Mylato;
+  font-style: normal;
+  src: url('../../../../s/lato/Lato-Regular.ttf') format('truetype');
+}
 :root {
   /**
   @font family declaration
@@ -46,25 +65,25 @@
   /* --myroboto-body: Myroboto, sans-serif;
   --mylato-heading: Mylato, sans-serif;
   --mypopp: Mypopp, sans-serif; */
-  --tg-ff-body: Myroboto, sans-serif;
-  --tg-ff-heading: Mylato, sans-serif;
-  --tg-ff-p: Mypopp, sans-serif;
+  --tg-ff-body: Myroboto;
+  --tg-ff-heading: Mylato;
+  --tg-ff-p: Mypopp;
   --tg-ff-fontawesome: "Font Awesome 6 Pro";
   /**
   @color declaration
   */
   --tg-common-white:#fff;
-  --tg-common-blue: rgb(10, 90, 170);
+  --tg-common-blue: rgb(68, 108, 148);
   --tg-common-black: #05092B;
   --tg-common-black-dark: #1D2142;
   --tg-common-yellow: #F8BC26;
   --tg-grey-1: #F9F9F9;
-  --tg-text-body: #737373;
+  --tg-text-body: #111;
   --tg-theme-1: #351EE0;
   --tg-theme-2: #111536;
   --tg-gradient-1: #ea6c9a;
   --tg-gradient-2: #3F74EF;
-  --tg-border-1: #CCCCCC;
+  --tg-border-1: #ddd;
 
 
 
@@ -100,7 +119,7 @@
 	typography css start 
 ---------------------------------*/
 body {
-  font-family: var(--tg-ff-body);
+  font-family: Mypopp, Mylato;
   font-weight: normal;
   color: var(--tg-text-body);
   line-height: 33px;
@@ -116,7 +135,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--tg-ff-heading);
+  font-family: Myroboto;
   color: var(--tg-common-black);
   margin-top: 0px;
   margin-bottom: 0;
@@ -164,7 +183,7 @@ ul {
 }
 
 p {
-  font-family: var(--tg-ff-heading);
+  font-family: Mypopp;
   color: var(--tg-text-body);
   font-weight: 500!important;
   font-size: calc(14px + 0.1vw)!important;
@@ -448,15 +467,15 @@ input[type=color] {
 	1. Button style
 ===============================*/
 .tg-btn-gradient {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: calc(14px + 0.1vw);
+  font-weight: 600;
   position: relative;
   overflow: hidden;
   z-index: 1;
   padding: 0 29px;
-  height: 60px;
+  height: 50px;
   display: inline-block;
-  line-height: 60px;
+  line-height: 50px;
   border-radius: 5px;
   color: var(--tg-common-white);
   background-image: none;
@@ -498,8 +517,10 @@ input[type=color] {
   background-position: 100% 100%;
 }
 .tg-btn-gradient-border {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: calc(14px + 0.2vw);
+  color: var(--tg-text-body);
+  font-family: Myroboto;
+  font-weight: 550;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -664,7 +685,7 @@ input[type=color] {
 .tg-custom-accordion .accordion-buttons {
   position: relative;
   width: 100%;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 22px;
   text-align: left;
   padding: 21px 60px;
@@ -678,7 +699,7 @@ input[type=color] {
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .tg-custom-accordion .accordion-buttons {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 @media (max-width: 767px) {
@@ -688,7 +709,7 @@ input[type=color] {
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .tg-custom-accordion .accordion-buttons {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 .tg-custom-accordion .accordion-buttons::after {
@@ -1281,23 +1302,23 @@ input[type=color] {
   }
 }
 .tg-breadcrumb__list span {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--tg-common-white);
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .tg-breadcrumb__list span {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .tg-breadcrumb__list span {
-    font-size: 19px;
+    font-size: 14px;
   }
 }
 @media (max-width: 767px) {
   .tg-breadcrumb__list span {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 .tg-breadcrumb__list span.dvdr {
@@ -1512,10 +1533,11 @@ input[type=color] {
 
 .apply-intern{
   display: inline-block;
-  background-color: var(--color_4);
+  background-image: linear-gradient(to right, var(--tg-gradient-1), var(--tg-gradient-2), var(--tg-gradient-2), var(--tg-gradient-1));
   color: var(--tg-common-white)!important;
   font-size: calc(14px + 0.1vw);
-  font-weight: 600;
+  font-family: Myroboto;
+  font-weight: 500;
   text-decoration: none;
   padding: calc(8px + 0.1vw) calc(15px + 0.2vw);
   border-radius: calc(25px + 1vw);
@@ -1568,7 +1590,7 @@ input[type=color] {
 }
 
 .tgmenu__navbar-wrap ul {
-  text-align: end;
+  text-align: center;
   margin-right: -50px;
 }
 .tgmenu__navbar-wrap ul li {
@@ -1588,14 +1610,17 @@ input[type=color] {
   transform: translateY(-50%);
 }
 .tgmenu__navbar-wrap ul li a {
-  font-family: var(--tg-ff-body);
+  font-family: Myroboto;
   font-size: calc(14px + 0.15vw);
-  font-weight: 600;
+  font-weight: 500;
   padding: 37px 0px;
   position: relative;
   display: inline-block;
   text-transform: capitalize;
   color: var(--tg-common-blue);
+}
+.tgmenu__navbar-wrap ul li a:hover{
+  color: var(--color_4);
 }
 .tgmenu__navbar-wrap ul li .sub-menu {
   position: absolute;
@@ -2089,30 +2114,23 @@ input[type=color] {
   border: 1px solid var(--tg-common-white);
   cursor: pointer;
 }
+
 .first-image{
   background-image: url('../myimage/first-image.png');
   background-size: cover;
   background-repeat: no-repeat;
-  height: calc(300px + 15vw); 
+  height: calc(300px + 10vw); 
+  width: 100%!important;
 }
 /*=============================
     16. hero css start 
 ===============================*/
 .tg-hero-ptb {
-  padding-bottom: 240px;
-  padding-top: 130px;
+  padding-bottom: calc(90px + 8vw);
+  padding-top: calc(50px + 2vw);
 }
-@media (max-width: 767px) {
-  .tg-hero-ptb {
-    padding: 100px 0;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .tg-hero-ptb {
-    padding-bottom: 120px;
-    padding-top: 130px;
-  }
-}
+
+
 .tg-hero-subtitle {
   font-size: 16px;
   font-weight: 700;
@@ -3354,18 +3372,20 @@ input[type=color] {
   padding-left: 9px;
 }
 .tg-feature-title {
-  font-size: 22px;
-  font-weight: 700;
+  color: var(--tg-text-body);
+  font-family: Myroboto;
+  font-size: 20px;
+  font-weight: 550;
   line-height: 1.5;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .tg-feature-title {
-    font-size: 19px;
+    font-size: 18px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .tg-feature-title {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -4516,8 +4536,9 @@ input[type=color] {
   margin-bottom: 15px;
 }
 .tg-funfact-item span {
-  font-size: 18px;
+  font-size: calc(16px + 0.1vw);
   font-weight: 400;
+  font-family: Mylato;
   line-height: 1;
   display: block;
   letter-spacing: -0.36px;
@@ -5249,12 +5270,14 @@ input[type=color] {
 }
 .tg-testimonial-content p {
   margin-bottom: 0;
+  font-size: calc(14px + 0.1vw);
+  font-weight: 500!important;
   color: rgba(255, 255, 255, 0.7);
   letter-spacing: -0.36px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .tg-testimonial-content p {
-    font-size: 16px;
+    font-size: calc(14px + 0.1vw);
   }
 }
 .tg-testimonial-quote {
@@ -7306,16 +7329,16 @@ input[type=color] {
   -webkit-text-fill-color: transparent;
 }
 .tg-contact-input-box-2 input {
-  height: 76px;
+  height: 56px;
   line-height: 76px;
   border-radius: 5px;
   background-color: var(--tg-grey-1);
-  font-size: 18px;
+  font-size: calc(14px + 0.1vw);
   width: 100%;
 }
 .tg-contact-input-box-2 input::placeholder {
-  font-size: 18px;
-  font-weight: 400;
+  font-size: calc(14px + 0.1vw);
+  font-weight: 500!important;
   line-height: 28px;
   letter-spacing: -0.36px;
 }
@@ -7605,7 +7628,7 @@ input[type=color] {
     12. footer css start 
 ===============================*/
 .tg-footer-text p {
-  font-size: calc(14px + 0.1vw);
+  font-size: calc(14px + 0.1vw)!important;
   font-weight: 550!important;
   line-height: 28px;
   letter-spacing: -0.36px;
@@ -7636,13 +7659,25 @@ input[type=color] {
   color: var(--tg-theme-1);
 }
 .tg-footer-widget-title {
-  font-size: 22px;
+  font-size: calc(18px + 0.1vw);
+  font-family: Myroboto;
   margin-bottom: 30px;
   color: var(--tg-common-white);
+  position: relative;
+}
+.tg-footer-widget-title::after{
+  content: " ";
+  height: calc(2px + 0.1vw);
+  width: calc(50px + 1vw);
+  background-image: linear-gradient(to right, var(--tg-gradient-1), var(--tg-gradient-2), var(--tg-gradient-2), var(--tg-gradient-1));
+  position: absolute;
+  top: 150%;
+  left: 0%;
 }
 @media (max-width: 767px) {
   .tg-footer-widget-title {
-    font-size: 20px;
+  font-size: calc(18px + 0.1vw);
+    
   }
 }
 .tg-footer-list ul li {
@@ -7652,7 +7687,7 @@ input[type=color] {
   margin-bottom: 7px;
 }
 .tg-footer-list ul li a {
-  font-family: var(--tg-ff-p)!important;
+  font-family: Mypopp!important;
   font-size: calc(14px + 0.1vw);
   font-weight: 500!important;
   line-height: 28px;
@@ -7694,7 +7729,7 @@ input[type=color] {
   color: var(--tg-common-white);
 }
 .tg-footer-Office-info span a {
-  font-family: var(--tg-ff-heading);
+  font-family: Myroboto;
   font-size: calc(14px + 0.1vw);
   font-weight: 500!important;
   line-height: 28px;
@@ -7961,9 +7996,8 @@ input[type=color] {
   /* border-top: 1px solid rgba(204, 204, 204, 0.23); */
 }
 .tg-copyright-left p {
-  font-size: calc(14px + 0.0      1vw);
+  font-size: calc(14px + 0.01vw);
   font-weight: 550!important;
-  font-family: var(--tg-ff-p)!important;
   margin-bottom: 0;
   letter-spacing: -0.36px;
   color: #fff;
@@ -7975,7 +8009,7 @@ input[type=color] {
 }
 .tg-copyright-right a {
   font-size: calc(14px + 0.01vw);
-  font-family: var(--tg-ff-p)!important;
+  font-family: Mypopp!important;
   font-weight: 550;
   letter-spacing: -0.36px;
   color: #fff;
@@ -8121,3 +8155,10 @@ input[type=color] {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+
+
+
+
+
+
