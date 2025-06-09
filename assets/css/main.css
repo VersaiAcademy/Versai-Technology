@@ -1515,9 +1515,7 @@ input[type=color] {
   -o-animation: 0.95s ease 0s normal forwards 1 running headerSlideDown;
   animation: 0.95s ease 0s normal forwards 1 running headerSlideDown;
 }
-.sticky-menu .tgmenu__navbar-wrap .navigation li a {
-  padding: 20px 0px;
-}
+
 .sticky-menu .tg-header-2-top__sticky {
   display: none;
 }
