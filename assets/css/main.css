@@ -1190,11 +1190,10 @@ input[type=color] {
 }
 
 .theme-bg {
-  background:linear-gradient(90deg, var(--tg-gradient-1) 40%, #ec99c3  100%);
+  background:linear-gradient(90deg, var(--tg-gradient-1) 40%, #ec99c3  100%)!important;
 }
 #theme-bgid{
-  background: linear-gradient(270deg, var(--tg-gradient-2) 70%, var(--tg-theme-1) 100%);
-  background-color: var(--tg-theme-1);
+  background: linear-gradient(270deg, var(--tg-gradient-2) 70%, var(--tg-theme-1) 100%)!important;
 }
 .gradient-bg {
   background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
